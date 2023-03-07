@@ -1,8 +1,4 @@
-@use "sass:map";
-@use "colors" as *;
-@use "typography" as *;
-@use "sizes" as *;
-@use "sass:math";
+@use 'sass:math';
 
 // ? Throw an error if the parameter has a unit
 @function rem($pixel) {

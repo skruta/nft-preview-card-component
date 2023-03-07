@@ -1,4 +1,26 @@
-@use '../abstracts/' as *;
+@use 'functions' as *;
 
 :root {
+  // Colors
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-soft-blue: hsl(215, 51%, 70%);
+  --color-cyan: hsl(178, 100%, 50%);
+  --color-cyan-transparent: hsla(178, 100%, 50%, 0.5);
+
+  --color-very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --color-very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --color-very-dark-blue-line: hsl(215, 32%, 27%);
+
+  // Fonts
+  --ff-outfit: 'Outfit', system-ui;
+  --fs-22: rem(22);
+  --fs-18: rem(18);
+  --fs-16: rem(16);
+  --fw-600: 600;
+  --fw-400: 400;
+  --fw-400: 300;
+
+  // Box shadow
+  --box-shadow-1: 0 rem(25) rem(50) var(var(--color-very-dark-blue-card-bg));
 }

@@ -1,5 +1,147 @@
-@use 'font-face' as *;
 @use 'root' as *;
 @use 'reset' as *;
 @use 'functions' as *;
-@use 'mixins' as *;
+
+body {
+  font-family: var(--ff-outfit);
+  background-color: var(--color-very-dark-blue-main-bg);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-inline-size: 1440px;
+  min-block-size: 100vh;
+
+  margin-inline: auto;
+}
+
+.card {
+  max-inline-size: rem(350);
+  padding-block: rem(24) rem(32);
+  padding-inline: rem(24);
+
+  background-color: var(--color-very-dark-blue-card-bg);
+
+  border-radius: rem(15);
+  box-shadow: var(--box-shadow-1);
+
+  &__header {
+    margin-block-end: 1rem;
+  }
+
+  &__image {
+    background-image: url('/assets/image-equilibrium.jpg');
+    background-position: center center;
+    background-size: cover;
+    aspect-ratio: 1/1;
+
+    margin-block-end: rem(24);
+
+    border-radius: rem(15);
+
+    &:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+
+      background-image: linear-gradient(
+          var(--color-cyan-transparent),
+          var(--color-cyan-transparent)
+        ),
+        url('/assets/image-equilibrium.jpg');
+
+      &::after {
+        content: url('/assets/icon-view.svg');
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem(22);
+    font-weight: var(--fw-600);
+    width: fit-content;
+
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-cyan);
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    font-weight: var(--fw-300);
+
+    color: var(--color-soft-blue);
+
+    margin-block-end: rem(24);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-block-end: rem(24);
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: rem(6.5);
+    }
+  }
+
+  &__price {
+    font-size: 1rem;
+    font-weight: var(--fw-600);
+
+    color: var(--color-cyan);
+  }
+
+  &__duration {
+    font-size: 1rem;
+    font-weight: var(--fw-400);
+
+    color: var(--color-soft-blue);
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: var(--color-very-dark-blue-line);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+
+  margin-block-start: rem(16);
+
+  &__image {
+    max-block-size: rem(32);
+    max-inline-size: rem(32);
+
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+  }
+
+  &__text {
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-cyan);
+      cursor: pointer;
+    }
+
+    & > span {
+      color: var(--color-soft-blue);
+    }
+  }
+}

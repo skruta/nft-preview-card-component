@@ -2,11 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="sass/main.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
+    <main>
+      <article class="card">
+        <header class="card__header">
+          <div class="card__image"></div>
+          <h1 class="card__title">Equilibrium &num;3429</h1>
+        </header>
+        <p class="card__text">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="card__info">
+          <div>
+            <img src="/assets/icon-ethereum.svg" alt="" class="card__icon" />
+            <span class="card__price">0.041 ETH</span>
+          </div>
+          <div>
+            <img src="/assets/icon-clock.svg" alt="" class="card__icon" />
+            <time datetime="PT72H" class="card__duration">3 days left</time>
+          </div>
+        </div>
+        <div class="line"></div>
+        <footer class="card__footer footer">
+          <img
+            src="/assets/image-avatar.png"
+            alt="Avatar where is user displayed"
+            class="footer__image"
+            width="132"
+            height="132"
+          />
+          <p class="footer__text"><span>Creation of Jules</span> Wyvern</p>
+        </footer>
+      </article>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
